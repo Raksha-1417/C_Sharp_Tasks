@@ -79,7 +79,7 @@ namespace C_Sharp_Tasks
             }
             else if (n >= 90 && n <= 100)
             {
-                Console.WriteLine("A+ Grade");
+                Console.WriteLine("A+ Grade is first");
             }
             Console.ReadLine();
 
