@@ -14,7 +14,7 @@ namespace C_Sharp_Tasks
             int[,] a = new int[50, 50];
             int[,] b = new int[50, 50];
             int[,] c= new int[50, 50];
-            Console.Write("\n Addition of Two Matrices");
+            Console.Write("\n Addition of Two Matrices\n");
             Console.WriteLine("Size of the Matrix");
             n=Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter the elements in the first matrix :\n");
