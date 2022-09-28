@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>C_Sharp_Tasks.Control</StartupObject>
+    <StartupObject>C_Sharp_Tasks.Task_13_OutKeyword</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -51,6 +51,10 @@
     <Compile Include="enummeration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Task_12_methods.cs" />
+    <Compile Include="Task_13_Add_Matrices.cs" />
+    <Compile Include="Task_13_OutKeyword.cs" />
+    <Compile Include="Task_13_Param.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

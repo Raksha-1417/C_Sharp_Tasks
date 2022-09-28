@@ -10,87 +10,37 @@ namespace C_Sharp_Tasks
     {
         public static void Main()
         {
-            Console.WriteLine("CONTROL STATEMENTS");
-            //INVOKE STATIC METHOD WITHIN THE SAME CLASS WHERE THE MAIN METHOD IS PRESENT
-            Conditional();
-            //INVOKE INSTANCE METHOD WITHIN THE SAME CLASS WHERE THE MAIN METHOD IS PRESENT
-            Employee c = new Employee(); // instance created for the class
-            c.Looping();
+            Console.WriteLine("Employee Details are");
+            Console.WriteLine("**********************");
+
+            employeedetails();
+        
+
+        }
+        public static void employeedetails()
+        {
+            Console.WriteLine("Enter the Employee ID");
+            int empid = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Employee Name");
+            string empname = Console.ReadLine();
+            Console.WriteLine("Enter department");
+            string dep = Console.ReadLine();
+            Console.WriteLine("Enter Salary");
+            int salary = Convert.ToInt32(Console.ReadLine());
+            Employee e = new Employee();
+            e.employeeprint(empid,empname,dep,salary);
+            Console.ReadLine();
 
 
         }
-        public static void Conditional()
-        {
-            Console.WriteLine("CONTROL STATEMENTS - CONDITIONAL - STATIC");
-            //Relational and Logical Operators
-            //Greatest of 3 numbers
-            int a, b, c;
-            Console.WriteLine("Enter the values");
-            a = Convert.ToInt32(Console.ReadLine());
-            b = Convert.ToInt32(Console.ReadLine());
-            c = Convert.ToInt32(Console.ReadLine());
-            if ((a > b) && (a > c))
-            {
-                Console.WriteLine("A is the greatest");
-            }
-            else if (b > c)
-            {
-                Console.WriteLine("B is the greatest");
-            }
-            else
-            {
-                Console.WriteLine("C is the greatest");
-            }
 
-        }
-        /// <summary>
-        /// INSTANCE METHOD - no static keyword
-        /// </summary>
-        public void Looping()
+        public void employeeprint(int empid, string empname,string dep,int salary)
         {
-            Console.WriteLine("CONTROL STATEMENTS - LOOPING - INSTANCE");
-            //Arrays - 1D Array - Initialize - Compile time
-            int[] numbers1 = new int[] { 1, 2, 3, 4, 5, 6 };
-            int[] numbers2 = new int[7] { 1, 2, 3, 4, 5, 6, 7 };
-            int[] numbers3 = { 1, 2, 3 };
-            int sum = 0;
-            Console.WriteLine("----------------------------------------");
-            //for loop
-            for (int i = 0; i < numbers1.Length; i++)
-            {
-                Console.WriteLine(numbers1[i]);
-            }
-            Console.WriteLine("----------------------------------------");
-            //foreach
-            foreach (int n in numbers2)
-            {
-                Console.WriteLine(n);
-            }
-            Console.WriteLine("----------------------------------------");
-            //for
-            for (int i = 0; i < numbers3.Length; i++)
-            {
-                sum = sum + numbers3[i];
-            }
-            Console.WriteLine("Sum is:{0}", sum);
-            Console.WriteLine("----------------------------------------");
-            //Accept the size and array elements at runtime
-            int size;
-            Console.WriteLine("Enter the size of the array");
-            size = Convert.ToInt32(Console.ReadLine()); //3 
-            int[] courseid = new int[size]; //int[] courseid=new int[3]
-            //INPUT
-            for (int j = 0; j < size; j++) //0<3,1<3,2<3,3<3
-            {
-                Console.WriteLine("Enter the value of {0} array", (j + 1));
-                courseid[j] = Convert.ToInt32(Console.ReadLine()); //course[0]=10,course[1]=20,course[2]=30
-            }
-            //OUTPUT
-            Console.WriteLine("Elements in the Array");
-            foreach (int c in courseid)
-            {
-                Console.WriteLine(c); //10,20,30
-            }
+            Console.WriteLine("Employee ID is " + empid);
+            Console.WriteLine("Employee Name is " + empname);
+            Console.WriteLine("Employee department " + dep);
+            Console.WriteLine("Employee Salary is " + salary);
+            Console.ReadLine();
         }
 
 
